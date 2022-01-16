@@ -1,0 +1,22 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+header.ant-layout-header,
+footer.ant-layout-footer {
+	background-color: #36628b;
+	color: #fff;
+}
+
+footer.ant-layout-footer .ant-col.gutter-row p {
+	margin-bottom: 0;
+}
