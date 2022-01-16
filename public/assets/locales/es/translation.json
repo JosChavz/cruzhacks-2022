@@ -1,3 +1,6 @@
 {
-	"Welcome to React": "Bienvenido a React"
+	"Welcome": "Este proyecto está destinado a recuperar la información del Documento de Investigación que está buscando.",
+	"Submit": "Enviar",
+	"Query": "Consulta",
+	"Language": "Idioma"
 }

@@ -1,3 +1,6 @@
 {
-	"Welcome": "Welcome!~\nThis project is meant to retrieve information of the Research Paper that you are looking for."
+	"Welcome": "Welcome!~\nThis project is meant to retrieve information of the Research Paper that you are looking for.",
+	"Submit": "Submit",
+	"Query": "Query",
+	"Language": "Language"
 }
