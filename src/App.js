@@ -136,38 +136,35 @@ function getCookie(name) {
     return null;
 }
 
-function reRender() {
-	this.forceUpdate();
-}
-
-const onFinish = async (values) => {
-	const user_lang = ( getCookie("i18next") != null ) ? getCookie("i18next") : 'en';
-	values.lang = user_lang;
-	values.amount = 5;
-
-	console.log(values);
-
-	// The URL that will be sent
-	const init_url = "";
-	const last_url = `/${values.query}/${values.amount}/${values.lang}`;
-
-	// Sends to the Flask server and retrieves data
-	await axios.get('http://echo.jsontest.com/key/value/one/two', values, {
-		headers:  {
-			"Content-Type": "application/json; charset=UTF-8",
-		},
-	}).then( response => {
-		return response.data;
-	}).then(data => {
-		console.log(data);
-	}).catch(error => {
-		console.log(error);
-	});
-};
-
 function App() {
 	const { t } = useTranslation();
 	const [form] = Form.useForm();
+
+	const test = async (values) => {
+		const user_lang = ( getCookie("i18next") != null ) ? getCookie("i18next") : 'en';
+		values.lang = user_lang;
+		values.amount = 5;
+
+		console.log(values);
+
+		// The URL that will be sent
+		const init_url = "";
+		const last_url = `/${values.query}/${values.amount}/${values.lang}`;
+
+		// Sends to the Flask server and retrieves data
+		await axios.get('http://echo.jsontest.com/key/value/one/two', values, {
+			headers:  {
+				"Content-Type": "application/json; charset=UTF-8",
+			},
+		}).then( response => {
+			return response.data;
+		}).then(data => {
+			console.log(data);
+		}).catch(error => {
+			console.log(error);
+		});
+
+	}
 
   return (
 		<>
@@ -185,7 +182,7 @@ function App() {
 				</Header>
 				<Layout className='main-content'>
 					<h2>{t('Welcome')}</h2>
-					<Form form={form} name="control-hooks" onFinish={onFinish}>
+					<Form form={form} name="control-hooks" onFinish={test}>
 						<Form.Item name="query" label={t("Query")} rules={[{ required: true }]}>
 							<Input />
 						</Form.Item>
