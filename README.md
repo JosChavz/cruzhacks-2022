@@ -3,7 +3,7 @@ Imagine all scholars around the globe able to acquire research papers? Whether t
 This problem is intended to make research papers accessible for **everyone**.
 
 # Lost in Arxiv
-Currently, our web app is meant to be usable in different languages and from importing a
+(Not working at the moment... Still a WIP)
 
 ## The Bigger Picture
 This is where it all began, from an idea. One teammate suggested to create a web-app where a reader can hover over citations and see an abstract of the reference. Also, to include Wolfram into scan any equations on the sheet so the reader can understand what this equation is. This project is meant for self-study scholars who may be confused from all this information they're taking in.
